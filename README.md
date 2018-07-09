@@ -110,6 +110,6 @@ server {
 next.js、nuxt.js等服务端渲染框架构建的项目部署到服务器，并用PM2守护程序
 ](https://segmentfault.com/a/1190000012774650)
 
-## 线上网站
+## 线上参考案例
 
-* [乐器之乡--电子商务网站](www.yueqizhixiang.com)
+* [乐器之乡电子商务网站](www.yueqizhixiang.com)

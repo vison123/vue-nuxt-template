@@ -1,9 +1,11 @@
 <template>
   <div class="container">
     <app-logo></app-logo>
-    <h1 class="title">
-      Home
-    </h1>
+    <div>
+      <h1 class="title">
+        关于
+      </h1>
+    </div>
   </div>
 </template>
 
@@ -16,7 +18,7 @@
     },
     data () {
       return {
-        title: '首页'
+        title: '关于'
       }
     },
     asyncData (context) {
@@ -33,7 +35,7 @@
       return {
         title: this.title,
         meta: [
-          { hid: 'home' , name: 'description', content: 'My custom description' }
+          { hid: 'description', name: 'description', content: 'My custom description' }
         ]
       }
     },
@@ -54,7 +56,6 @@
 
 <style>
   .container {
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,5 +69,17 @@
     font-size: 100px;
     color: #35495e;
     letter-spacing: 1px;
+  }
+
+  .subtitle {
+    font-weight: 300;
+    font-size: 42px;
+    color: #526488;
+    word-spacing: 5px;
+    padding-bottom: 15px;
+  }
+
+  .links {
+    padding-top: 15px;
   }
 </style>

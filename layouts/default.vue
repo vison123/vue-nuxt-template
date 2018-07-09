@@ -1,52 +1,50 @@
 <template>
   <div>
-    <nuxt/>
+    <header>
+      <app-menu
+        background-color="#484848"
+        bottom-color="#ffd04b"
+        text-color="#ffffff"
+        active-text-color="#ffd04b"
+      >
+        <menu-item link="/">首页</menu-item>
+        <menu-item link="/about">关于金诚</menu-item>
+        <menu-item link="/town">特色小镇</menu-item>
+        <menu-item link="/wealth">金诚财富</menu-item>
+        <menu-item link="/biz">金诚业务</menu-item>
+        <menu-item link="/news">新闻中心</menu-item>
+        <menu-item link="/bidding">招采信息</menu-item>
+        <menu-item link="/joinus">加入金诚</menu-item>
+        <menu-item link="/contract">联系我们</menu-item>
+      </app-menu>
+    </header>
+    <main class="main-content">
+      <nuxt/>
+    </main>
+    <footer>
+      <foot-view></foot-view>
+    </footer>
   </div>
 </template>
 
+<script>
+  import AppMenu from '~/components/menu/menu.vue'
+  import MenuItem from '~/components/menu/menu-item.vue'
+  import FootView from '~/components/footer/footer.vue'
+
+  export default {
+    components: {
+      AppMenu,
+      MenuItem,
+      FootView
+    }
+  }
+</script>
+
 <style>
-html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
+  .main-content{
+    height: 100%;
+    min-height: 750px;
+    width: 100%;
+  }
 </style>
