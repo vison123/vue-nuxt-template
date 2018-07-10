@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "gsap": "^2.0.1",
     "nuxt": "^1.0.0",
     "vue-notifications": "^0.9.0"
   },

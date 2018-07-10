@@ -11,7 +11,6 @@
 
 <script>
   export default {
-
     components: {},
     props: {
       backgroundColor: String,
