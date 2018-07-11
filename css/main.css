@@ -12,3 +12,15 @@ body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, l
   -webkit-tap-highlight-color:transparent;
   -webkit-font-smoothing: antialiased;
 }
+
+.swiper-pagination-bullet {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  opacity: 1;
+  border-radius: 10px;
+  background: white;
+  margin: 0 3px;
+  cursor: pointer;
+  transition: width 0.3s ease-in-out;
+}

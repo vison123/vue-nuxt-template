@@ -1,36 +1,76 @@
 <template>
   <div class="footer">
-    <div class="footer-content">
-      <img src="../../static/icon.png"/>
-      <div>
-        <a>商务合作</a>
-        <a>意见反馈</a>
-        <a>关于我们</a>
-        <a>联系我们</a>
-        <a>版权声明</a>
-      </div>
+    <div class="footer1">
+      footer1
+    </div>
+    <div class="footer2">
+      Copyright © 2013-2018
+    </div>
+    <div class="footer3">
+      footer3
     </div>
   </div>
 </template>
 
 <style>
   .footer {
-    padding: 40px 0;
+    height: 200px;
     width: 100%;
-    background-color: #FFF;
-  }
-  .footer-content {
-    width: 1180px;
-    margin: 0 auto;
+    padding: 40px;
+    background-color: #cac0dd;
+    box-shadow: 0px -4px 24px 2px rgba(0, 0, 0, 0.15);
     display: flex;
-    justify-content: flex-start;
     align-items: center;
   }
 
-  .footer-content img {
-    width: 80px;
-    height: 75px;
+  .footer1 {
+    background-color: #41b883;
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
+  .footer2 {
+    background-color: #efc14e;
+    flex: 2;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer3 {
+    background-color: #9575cd;
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 640px) {
+    .footer1 {
+      display: none;
+    }
+
+    .footer2 {
+      background-color: #efc14e;
+      flex: 2;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer3 {
+      display: none;
+    }
+
+  }
+
+
 </style>
 
 

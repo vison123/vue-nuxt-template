@@ -15,17 +15,18 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
     ],
     script: [
-      { src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js' }
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js' },
     ],
   },
   /*
   ** global css
   */
   css: [
-    '~/css/main.css'
+    '~/css/main.css',
+    'swiper/dist/css/swiper.css'
   ],
   /*
   ** Customize the progress bar color
@@ -53,6 +54,7 @@ module.exports = {
   },
   // ssr标明脚本库是想在服务端使用，还是想在客户端使用
   plugins: [
-    { src: '~/plugins/vue-notifications', ssr: false }
+    { src: '~/plugins/vue-notifications', ssr: false },
+    { src: '~/plugins/swiper.js', ssr: false },
   ]
 }

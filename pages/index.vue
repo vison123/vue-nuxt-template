@@ -1,23 +1,56 @@
-<template>
-  <div class="container">
-    <app-logo></app-logo>
-    <h1 class="title">
-      Home
-    </h1>
+<template xmlns:v-swiper="http://www.w3.org/1999/xhtml">
+  <div v-swiper:mySwiper="swiperOption">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="../static/image/bg-1.png">
+      </div>
+      <div class="swiper-slide">
+        <img src="../static/image/bg-2.png">
+      </div>
+      <div class="swiper-slide">
+        <img src="../static/image/bg-3.png">
+      </div>
+    </div>
+    <div class="swiper-pagination swiper-pagination-bullets"></div>
   </div>
 </template>
 
 <script>
-  import AppLogo from '~/components/AppLogo.vue'
-
   export default {
-    components: {
-      AppLogo,
-    },
     data () {
       return {
-        title: '首页'
+        title: '首页',
+        swiperOption: {
+          loop: true,
+          slidesPerView: 'auto',
+          centeredSlides: true,
+          pagination: {
+            el: '.swiper-pagination',
+            dynamicBullets: true
+          },
+          on: {
+            slideChange() {
+              console.log('onSlideChangeEnd', this);
+            },
+            tap() {
+              console.log('onTap', this);
+            }
+          }
+        }
       }
+    },
+    mounted() {
+      console.log('app init', this)
+      setTimeout(() => {
+        this.banners.push('/5.jpg')
+        console.log('banners update')
+      }, 3000)
+      console.log(
+        'This is current swiper instance object', this.mySwiper,
+        'I will slideTo banners 3')
+      this.mySwiper.slideTo(3)
+    },
+    components: {
     },
     asyncData (context) {
       // 最重要的一个键, 支持 异步数据处理，另外该方法的第一个参数为当前页面组件的 上下文对象。
@@ -53,20 +86,20 @@
 </script>
 
 <style>
-  .container {
-    height: 100%;
+  .my-swiper {
+    height: 300px;
+    width: 100%;
+  }
+  .my-swiper .swiper-slide {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 700;
+    background-color: #eee;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
   }
-
-  .title {
-    font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-    display: block;
-    font-weight: 300;
-    font-size: 100px;
-    color: #35495e;
-    letter-spacing: 1px;
+  .my-swiper .swiper-pagination > .swiper-pagination-bullet {
+    background-color: red;
   }
 </style>

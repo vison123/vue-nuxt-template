@@ -26,4 +26,9 @@
 </script>
 
 <style>
+  .main-content{
+    height: 100%;
+    min-height: 525px;
+    width: 100%;
+  }
 </style>
